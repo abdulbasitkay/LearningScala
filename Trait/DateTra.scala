@@ -24,9 +24,13 @@ class Date(y: Int, m: Int, d: Int) extends Ord {
   (year == o.year && (month < o.month ||
                      (month == o.month && day < o.day)))
   }
+}
 
-  def main(args: Array[String]){
-    
+object DateTra {
+  def main(args: Array[String]) {
+    val dateThis = new Date(1993, 12, 15)
+    val dateThat = new Date(1992, 12, 15)
+
+    println(dateThis.>=(dateThat))
   }
-  
 }
